@@ -1,0 +1,6 @@
+!Darase|手軽にホームページを作成、更新
+?レスポンシブ、サイトの再構築、デザインカンプからサイト制作などHTMLコーディングの仕事をしています。
+favicon.ico
+images/logo.png
+Monsterの画像と文字でDarasen
+(C)20202- Darasen <a href="privacy.html">プライバシーポリシー</a>

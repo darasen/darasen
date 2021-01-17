@@ -1,0 +1,352 @@
+@charset "utf-8";
+html{
+    font-family: "Sawarabi Gothic";
+    font-size:1.1rem;
+}
+a{
+    color: #f39;
+}
+
+img{
+    max-width: 100%;
+}
+/* ========================================
+    MapのCSS
+========================================= */
+.map {
+  position: relative;
+  width: 100%;
+  padding-top: 75%; /* = height ÷ width × 100 */
+}
+.map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* ========================================
+    GoogleフォームのCSS
+========================================= */
+.iframe-wrap {
+    position: relative;
+    width: 100%;
+    padding-top: 50%; /* = height ÷ width × 100 　googleフォームの時は→105　*/
+  }
+   .iframe-wrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  /* ========================================
+    上へ戻る矢印のCSS
+  ========================================= */
+.back-to-top {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+    display: none;
+}
+.back-to-top:before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(255,0,0,0.5);
+}
+.back-to-top:after {
+    content: "上に戻る";
+    display: block;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.5rem;
+}
+/* メールフォーム */
+.contact-form {
+  width: 90%;
+  height: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 0.8rem;
+  font-family: sans-serif;
+
+}
+.contact-form .item {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.contact-form .item.no-label {
+  padding: 5px 0px 5px 60px;
+}
+.contact-form .item .label {
+  float: left;
+  padding: 5px;
+  margin:0;
+}
+.contact-form .item .radio-group{
+  padding: 5px 0px 5px 60px;
+}
+.contact-form .item input[type=text],
+.contact-form .item input[type=email],
+.contact-form .item textarea {
+  display: block;
+  margin-left: 60px;
+  width: 70%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 13px;
+}
+.contact-form .item ::placeholder {
+  color: #ccc;
+}
+.contact-form .item textarea {
+  outline: none;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+input[type=submit] {
+  border: none;
+  outline: none;
+  display: block;
+  line-height: 30px;
+  width: 80px;
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
+  background-color: #333;
+  border-bottom: 4px solid #000;
+  cursor:pointer;
+
+  box-sizing: content-box;
+  transition:0.3s ease all
+}
+input[type=submit]:hover{
+  border-bottom-width:0;
+  transform:translateY(4px)
+}
+
+/* メールここまで */
+/* ========================================
+    ラッパー
+========================================= */
+#wrapper{
+    max-width: 1100px;
+    height: auto;
+    margin: 0 auto;
+
+}
+/* ========================================
+    ヘッダー
+========================================= */
+header {
+
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+/* ========================================
+    ナビ　メニュー
+========================================= */
+nav{
+    max-width: 1100px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.drawer-list{
+    display: flex;
+    font-size:1.25rem;
+    margin-top: 34px;
+    list-style: none;
+
+}
+.drawer-list li{
+
+    margin-left: 36px;
+}
+
+/* ========================================
+    コンテナ
+========================================= */
+#container{
+    display: flex;
+    justify-content: space-between;
+
+}
+/* ========================================
+    レフト
+========================================= */
+aside {
+    width: 30%;
+    height: auto;
+}
+aside h1{
+  display: none;
+}
+/* ========================================
+    ライト
+========================================= */
+main {
+    width: 68%;
+    height: auto;
+
+}
+article img {
+  opacity: 0.4;
+}
+/* スマホ表示の時のタイトル　ｐｃ表示の時は非表示*/
+.mintitle{
+    display: none;
+}
+/* ========================================
+    フッター
+========================================= */
+footer {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    text-align: center;
+}
+/*バーガーメニューPCでは非表示*/
+.drawer-hidden {
+  display: none;
+}
+.drawer-open{
+  display: none;
+}
+/* ========================================
+    PC以外のCSS
+========================================= */
+@media screen and (max-width: 600px) {
+
+aside{
+  display: none;
+    }
+main{
+width : 100%;
+ margin: 5%;
+    }
+.drawer-list{
+ display: list-item;
+ font-size: 1.1rem;
+
+
+}
+.mintitle{
+display: flex;
+justify-content: space-between;
+margin-bottom: 10px;
+    }
+h1{
+font-size: 1.5rem;
+    }
+h2{
+font-size: 1.3rem;
+}
+/*------------------------------
+
+  ここから下がハンバーガーメニュー
+  に関するCSS
+
+------------------------------*/
+
+/* チェックボックスは非表示に */
+.drawer-hidden {
+  display: none;
+}
+ .drawer{
+     position: relative;
+     top:0;
+
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer-open {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;/* 重なり順を一番上に */
+  cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+
+.drawer-open span,
+.drawer-open span:before,
+.drawer-open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: rgba(255,0,0,0.5);
+  transition: .5s;
+  position: absolute;
+  font-size: 0.4rem;
+  color: rgba(255,0,0,0.5);
+}
+/* 三本線のうち一番上の棒の位置調整 */
+.drawer-open span:before {
+  bottom: 8px;
+}
+
+/* 三本線のうち一番下の棒の位置調整 */
+.drawer-open span:after {
+  top: 8px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer-check:checked ~ .drawer-open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer-check:checked ~ .drawer-open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer-check:checked ~ .drawer-open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* メニューのデザイン*/
+.drawer-content {
+  width: 60%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%;/* メニューを画面の外に飛ばす */
+  z-index: 99;
+  background: rgba(0,0,0,0.5);
+  transition: .5s;
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer-check:checked ~ .drawer-content {
+  left: 0;/* メニューを画面に入れる */
+}
+
+}

@@ -1,0 +1,3 @@
+$ご意見をお寄せ下さい。
+すべて入力してください。
+*<iframe src="mail.php" frameborder="0"></iframe>
