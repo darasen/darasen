@@ -12,7 +12,7 @@ if ($_POST["submit"] == "メール送信"){
 
     mb_language("Ja");
     mb_internal_encoding("UTF-8");
-    $mailto="massie_jp@yahoo.co.jp";
+    $mailto="majp@aaa.co.jp";
     $subject = "お問い合わせメールきたよ";
     $content = htmlspecialchars($_POST["content"]);
     $name = htmlspecialchars($_POST["name"]);
